@@ -1,0 +1,3 @@
+server: ivanka1212171.mylabserver.com
+port: 4433
+prefix: /classifier-api
