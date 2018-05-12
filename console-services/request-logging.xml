@@ -1,0 +1,10 @@
+<configuration debug="false" scan="true">
+  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <file>/var/log/puppetlabs/console-services/console-services-access.log</file>
+    <encoder>
+      <!-- The first 7 fields are Common Log Format. -->
+      <pattern>%h %l %u [%t] "%r" %s %b "%i{Referer}" "%i{User-Agent}" %D %header{X-Forwarded-For}</pattern>
+    </encoder>
+  </appender>
+  <appender-ref ref="FILE" />
+</configuration>

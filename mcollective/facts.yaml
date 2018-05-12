@@ -1,0 +1,335 @@
+---
+aio_agent_version: 1.7.1
+architecture: x86_64
+augeas:
+  version: 1.4.0
+augeasversion: 1.4.0
+bios_release_date: 08/24/2006
+bios_vendor: Xen
+bios_version: 4.2.amazon
+blockdevice_xvda_size: 21474836480
+blockdevices: xvda
+chassistype: Other
+dhcp_servers:
+  eth0: 172.31.112.1
+  system: 172.31.112.1
+disks:
+  xvda:
+    size: 20.00 GiB
+    size_bytes: 21474836480
+dmi:
+  bios:
+    release_date: 08/24/2006
+    vendor: Xen
+    version: 4.2.amazon
+  chassis:
+    type: Other
+  manufacturer: Xen
+  product:
+    name: HVM domU
+    serial_number: ec2a4441-abb0-d873-f372-ea301baf32bc
+    uuid: EC2A4441-ABB0-D873-F372-EA301BAF32BC
+domain: mylabserver.com
+ec2_metadata:
+  ami-id: ami-4e427437
+  ami-launch-index: '0'
+  ami-manifest-path: "(unknown)"
+  block-device-mapping:
+    ami: "/dev/sda1"
+    root: "/dev/sda1"
+  hostname: ip-172-31-119-199.mylabserver.com
+  iam:
+    info: |-
+      {
+        "Code" : "Success",
+        "LastUpdated" : "2018-05-11T23:08:44Z",
+        "InstanceProfileArn" : "arn:aws:iam::045981373300:instance-profile/ServerLabServer",
+        "InstanceProfileId" : "AIPAIXSZ5N44JDJPOV73I"
+      }
+  instance-action: none
+  instance-id: i-0754d63bb2ad853b9
+  instance-type: t2.large
+  local-hostname: ip-172-31-119-199.mylabserver.com
+  local-ipv4: 172.31.119.199
+  mac: 02:4b:89:82:57:00
+  metrics:
+    vhostmd: <?xml version="1.0" encoding="UTF-8"?>
+  network:
+    interfaces:
+      macs:
+        02:4b:89:82:57:00:
+          device-number: '0'
+          interface-id: eni-7e8a6b5d
+          ipv4-associations:
+            54.171.154.161: 172.31.119.199
+          local-hostname: ip-172-31-119-199.mylabserver.com
+          local-ipv4s: 172.31.119.199
+          mac: 02:4b:89:82:57:00
+          owner-id: 045981373300
+          public-hostname: ''
+          public-ipv4s: 54.171.154.161
+          security-group-ids: sg-dc070db9
+          security-groups: default
+          subnet-id: subnet-43740c26
+          subnet-ipv4-cidr-block: 172.31.112.0/20
+          vpc-id: vpc-3f2aa65a
+          vpc-ipv4-cidr-block: 172.31.0.0/16
+          vpc-ipv4-cidr-blocks: 172.31.0.0/16
+  placement:
+    availability-zone: eu-west-1a
+  product-codes: aw0evgkw8e5c1q413zgy5pjce
+  profile: default-hvm
+  public-hostname: ''
+  public-ipv4: 54.171.154.161
+  public-keys:
+    '0':
+      openssh-key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCSLvBHH7QnpNW0EBjdhdpyqiehk8gu/bXHrGE2GLuOhhiaS+dCbq4Q5kGh9JAn8F+5KiVmO1BxNK+Acnx/QSV2P3rK/HwQFDNu9ifzUHcKe8UcacU9w9JYhBk9PrwEJjaWmC1jO9qCVteXhDEt+q4gjTmeGLoR7d0dgXM97GUVNB44cTWxEs/HrTFq1ptVvJdWd7OljPVQgET+Y63qiHwxTz8bVj9kaVJf4aRXkH1DlgLNnXvsOAS/mOnrrwRLxI9+ckE8JLvyiPcbDFOZ+jb1rcFzAP9WV8NyK+e4D29nItRidbFGMUOxtyKFvTDMd0dkOefdnAkznUym4xWgENv1
+        lab_servers_eu_west
+  reservation-id: r-0e21a5c492b8bf594
+  security-groups: default
+  services:
+    domain: amazonaws.com
+    partition: aws
+ec2_userdata: |
+  #!/bin/bash
+  INSTANCE_ID=$(curl http://169.254.169.254/latest/meta-data/instance-id)
+  HOST_NAME=$(curl -k https://linuxacademy.com/api/hostname/index/instanceid/$INSTANCE_ID)
+  echo $HOST_NAME
+  echo $(hostname $HOST_NAME)
+facterversion: 3.4.1
+filesystems: iso9660,xfs
+fqdn: ivanka1212171.mylabserver.com
+gid: root
+hardwareisa: x86_64
+hardwaremodel: x86_64
+hostname: ivanka1212171
+id: root
+identity:
+  gid: 0
+  group: root
+  privileged: true
+  uid: 0
+  user: root
+interfaces: eth0,lo
+ipaddress: 172.31.119.199
+ipaddress6: fe80::4b:89ff:fe82:5700
+ipaddress6_eth0: fe80::4b:89ff:fe82:5700
+ipaddress6_lo: "::1"
+ipaddress_eth0: 172.31.119.199
+ipaddress_lo: 127.0.0.1
+is_virtual: true
+kernel: Linux
+kernelmajversion: '3.10'
+kernelrelease: 3.10.0-862.2.3.el7.x86_64
+kernelversion: 3.10.0
+load_averages:
+  15m: 0.28
+  1m: 0.85
+  5m: 0.53
+macaddress: 02:4b:89:82:57:00
+macaddress_eth0: 02:4b:89:82:57:00
+manufacturer: Xen
+memory:
+  swap:
+    available: 7.63 GiB
+    available_bytes: 8191995904
+    capacity: 0%
+    total: 7.63 GiB
+    total_bytes: 8191995904
+    used: 0 bytes
+    used_bytes: 0
+  system:
+    available: 7.11 GiB
+    available_bytes: 7636746240
+    capacity: 6.88%
+    total: 7.64 GiB
+    total_bytes: 8200540160
+    used: 537.68 MiB
+    used_bytes: 563793920
+memoryfree: 7.11 GiB
+memoryfree_mb: 7282.96875
+memorysize: 7.64 GiB
+memorysize_mb: 7820.64453125
+mountpoints:
+  "/":
+    available: 7.49 GiB
+    available_bytes: 8038334464
+    capacity: 62.55%
+    device: "/dev/xvda1"
+    filesystem: xfs
+    options:
+    - rw
+    - seclabel
+    - relatime
+    - attr2
+    - inode64
+    - noquota
+    size: 19.99 GiB
+    size_bytes: 21463281664
+    used: 12.50 GiB
+    used_bytes: 13424947200
+mtu_eth0: 9001
+mtu_lo: 65536
+netmask: 255.255.240.0
+netmask6: 'ffff:ffff:ffff:ffff::'
+netmask6_eth0: 'ffff:ffff:ffff:ffff::'
+netmask6_lo: ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
+netmask_eth0: 255.255.240.0
+netmask_lo: 255.0.0.0
+network: 172.31.112.0
+network6: 'fe80::'
+network6_eth0: 'fe80::'
+network6_lo: "::1"
+network_eth0: 172.31.112.0
+network_lo: 127.0.0.0
+networking:
+  dhcp: 172.31.112.1
+  domain: mylabserver.com
+  fqdn: ivanka1212171.mylabserver.com
+  hostname: ivanka1212171
+  interfaces:
+    eth0:
+      bindings:
+      - address: 172.31.119.199
+        netmask: 255.255.240.0
+        network: 172.31.112.0
+      bindings6:
+      - address: fe80::4b:89ff:fe82:5700
+        netmask: 'ffff:ffff:ffff:ffff::'
+        network: 'fe80::'
+      dhcp: 172.31.112.1
+      ip: 172.31.119.199
+      ip6: fe80::4b:89ff:fe82:5700
+      mac: 02:4b:89:82:57:00
+      mtu: 9001
+      netmask: 255.255.240.0
+      netmask6: 'ffff:ffff:ffff:ffff::'
+      network: 172.31.112.0
+      network6: 'fe80::'
+    lo:
+      bindings:
+      - address: 127.0.0.1
+        netmask: 255.0.0.0
+        network: 127.0.0.0
+      bindings6:
+      - address: "::1"
+        netmask: ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
+        network: "::1"
+      ip: 127.0.0.1
+      ip6: "::1"
+      mtu: 65536
+      netmask: 255.0.0.0
+      netmask6: ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
+      network: 127.0.0.0
+      network6: "::1"
+  ip: 172.31.119.199
+  ip6: fe80::4b:89ff:fe82:5700
+  mac: 02:4b:89:82:57:00
+  mtu: 9001
+  netmask: 255.255.240.0
+  netmask6: 'ffff:ffff:ffff:ffff::'
+  network: 172.31.112.0
+  network6: 'fe80::'
+  primary: eth0
+operatingsystem: CentOS
+operatingsystemmajrelease: '7'
+operatingsystemrelease: 7.5.1804
+os:
+  architecture: x86_64
+  family: RedHat
+  hardware: x86_64
+  name: CentOS
+  release:
+    full: 7.5.1804
+    major: '7'
+    minor: '5'
+  selinux:
+    config_mode: enforcing
+    config_policy: targeted
+    current_mode: enforcing
+    enabled: true
+    enforced: true
+    policy_version: '31'
+osfamily: RedHat
+partitions:
+  "/dev/xvda1":
+    filesystem: xfs
+    mount: "/"
+    size: 20.00 GiB
+    size_bytes: 21473771008
+    uuid: 0f790447-ebef-4ca0-b229-d0aa1985d57f
+path: "/opt/puppetlabs/puppet/share/installer/vendor/ruby/2.1.0/bin:/sbin:/bin:/usr/sbin:/usr/bin"
+physicalprocessorcount: 1
+processor0: Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz
+processor1: Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz
+processorcount: 2
+processors:
+  count: 2
+  isa: x86_64
+  models:
+  - Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz
+  - Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz
+  physicalcount: 1
+productname: HVM domU
+puppetversion: 4.7.0
+ruby:
+  platform: x86_64-linux
+  sitedir: "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0"
+  version: 2.1.9
+rubyplatform: x86_64-linux
+rubysitedir: "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0"
+rubyversion: 2.1.9
+selinux: true
+selinux_config_mode: enforcing
+selinux_config_policy: targeted
+selinux_current_mode: enforcing
+selinux_enforced: true
+selinux_policyversion: '31'
+serialnumber: ec2a4441-abb0-d873-f372-ea301baf32bc
+ssh:
+  ecdsa:
+    fingerprints:
+      sha1: SSHFP 3 1 802b3c7fdcaa4ee240a2cd1396e1766b9aa4065b
+      sha256: SSHFP 3 2 4a1e5ac7998dddcbbc1f75cf3fbcfbf374815b66c544de7e37eec6576d7c3769
+    key: AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMWPxrI3QLISVr4UIiE2c9GGXkQ0pUk1BsSDOHKNw9nUNHAgDjc6/361mbOqOF0W9XTDbGeWnXMK28n8MjeigCE=
+  ed25519:
+    fingerprints:
+      sha1: SSHFP 4 1 ce3cfcd04c84df62b70ad8140bcc58d40dd72d8b
+      sha256: SSHFP 4 2 dbc3b349540569d312056315dc016d084c509e25c69b67a60389cf6af7f3a43d
+    key: AAAAC3NzaC1lZDI1NTE5AAAAIOJG2tO7y3v4/qYff0qqH5wVLN4nZqGD7IBM2xCdbhnP
+  rsa:
+    fingerprints:
+      sha1: SSHFP 1 1 68e5b90148fe2d8b0fd744ac157d5576b168e844
+      sha256: SSHFP 1 2 778f116c6e80c4d1031c2091da58ae3b2eaef143655ba670d9448936ee98568a
+    key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDDQ6fufs1CRD7CHV412WDNgZSa2rq7SsKgRuDHLJOxAI9s3CMgONC4nVTQUr/mq6212YxXDwm9KUAzyDILslLGmyni0VJjwSnDmH11HVYNf1efpRPHqLgDh6nncnrnNRpOjmGqHt5kkI3WGQEwpSqDSjAz95no/YicgA6hrawbrsmFpG3OmNiYpJrK7KCzqAOnDwXhEvMRqy+CN8YHcESdNn/b5rkKCg01Iy/IMAuUL7ogzSYcAdYGYYCFvU8z+VHQaQoxVLSQgIrYqo4EA8U9D1oFsuxd30ZXPNkxNp7TdmuHbqURf/ccgZVx5a+RrOu20lvT3CBIrNwtLS7OBCjJ
+sshecdsakey: AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMWPxrI3QLISVr4UIiE2c9GGXkQ0pUk1BsSDOHKNw9nUNHAgDjc6/361mbOqOF0W9XTDbGeWnXMK28n8MjeigCE=
+sshed25519key: AAAAC3NzaC1lZDI1NTE5AAAAIOJG2tO7y3v4/qYff0qqH5wVLN4nZqGD7IBM2xCdbhnP
+sshfp_ecdsa: |-
+  SSHFP 3 1 802b3c7fdcaa4ee240a2cd1396e1766b9aa4065b
+  SSHFP 3 2 4a1e5ac7998dddcbbc1f75cf3fbcfbf374815b66c544de7e37eec6576d7c3769
+sshfp_ed25519: |-
+  SSHFP 4 1 ce3cfcd04c84df62b70ad8140bcc58d40dd72d8b
+  SSHFP 4 2 dbc3b349540569d312056315dc016d084c509e25c69b67a60389cf6af7f3a43d
+sshfp_rsa: |-
+  SSHFP 1 1 68e5b90148fe2d8b0fd744ac157d5576b168e844
+  SSHFP 1 2 778f116c6e80c4d1031c2091da58ae3b2eaef143655ba670d9448936ee98568a
+sshrsakey: AAAAB3NzaC1yc2EAAAADAQABAAABAQDDQ6fufs1CRD7CHV412WDNgZSa2rq7SsKgRuDHLJOxAI9s3CMgONC4nVTQUr/mq6212YxXDwm9KUAzyDILslLGmyni0VJjwSnDmH11HVYNf1efpRPHqLgDh6nncnrnNRpOjmGqHt5kkI3WGQEwpSqDSjAz95no/YicgA6hrawbrsmFpG3OmNiYpJrK7KCzqAOnDwXhEvMRqy+CN8YHcESdNn/b5rkKCg01Iy/IMAuUL7ogzSYcAdYGYYCFvU8z+VHQaQoxVLSQgIrYqo4EA8U9D1oFsuxd30ZXPNkxNp7TdmuHbqURf/ccgZVx5a+RrOu20lvT3CBIrNwtLS7OBCjJ
+swapfree: 7.63 GiB
+swapfree_mb: 7812.49609375
+swapsize: 7.63 GiB
+swapsize_mb: 7812.49609375
+system_uptime:
+  days: 0
+  hours: 0
+  seconds: 559
+  uptime: 0:09 hours
+timezone: UTC
+uptime: 0:09 hours
+uptime_days: 0
+uptime_hours: 0
+uptime_seconds: 559
+uuid: EC2A4441-ABB0-D873-F372-EA301BAF32BC
+virtual: xenhvm
+clientcert: ivanka1212171.mylabserver.com
+clientversion: 4.7.0
+clientnoop: false
